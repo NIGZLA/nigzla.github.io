@@ -5,6 +5,31 @@
     
     <entry>
       <title>Mybatis</title>
+      <link href="/blog/2024/05/27/Java/"/>
+      <url>/blog/2024/05/27/Java/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><ol><li>什么是Java中的多态性（Polymorphism）？</li><li>Java的异常处理机制以及try-catch-finally块的作用。</li><li>什么是Java中的线程（Thread）？Java中线程的生命周期吗？</li><li>你了解Java中的反射（Reflection）吗？反射的主要用途是什么？</li></ol><p>面试Java开发岗位时，通常需要掌握以下技术栈：</p><ol><li><strong>Java核心技术</strong>：熟练掌握Java语言的基本语法、面向对象编程（OOP）、异常处理、集合框架等基础知识。</li><li><strong>数据库</strong>：熟悉关系型数据库（如MySQL、Oracle、PostgreSQL）以及至少一种NoSQL数据库（如MongoDB、Redis）的使用和基本操作，能够编写SQL语句进行数据操作，了解数据库设计和优化。</li><li><strong>Spring框架</strong>：掌握Spring框架的核心模块，包括Spring Core、Spring MVC、Spring Boot等，能够使用Spring进行项目的依赖注入、AOP编程、事务管理等。</li><li><strong>Spring Boot</strong>：熟悉Spring Boot框架，能够快速搭建和开发基于Spring Boot的应用程序，并了解Spring Boot的自动配置、起步依赖等特性。</li><li><strong>ORM框架</strong>：熟悉至少一种ORM（Object-Relational Mapping）框架，如Hibernate、MyBatis等，能够使用ORM框架简化数据库操作，提高开发效率。</li><li><strong>Web开发</strong>：了解HTTP协议、Servlet规范，熟悉常用的Web开发技术，如HTML、CSS、JavaScript，以及常用 的前端框架如Angular、React、Vue等。</li><li><strong>微服务架构</strong>：了解微服务架构的概念和原理，熟悉Spring Cloud等微服务框架，能够构建和部署基于微服务的分布式系统。</li><li><strong>版本控制工具</strong>：熟练使用版本控制工具如Git，能够进行代码的版本管理和团队协作。</li><li><strong>测试</strong>：熟悉单元测试、集成测试、端到端测试等各种测试方法，掌握JUnit等测试框架的使用。</li><li><strong>容器化技术</strong>：了解Docker、Kubernetes等容器化技术，能够使用容器化技术进行应用的部署和管理。</li><li><strong>消息队列</strong>：了解消息队列的概念和常见的消息中间件，如RabbitMQ、Kafka等，能够使用消息队列实现异步消息处理。</li><li><strong>安全</strong>：了解常见的Web安全问题，如跨站脚本攻击（XSS）、SQL注入等，能够进行安全意识培训和代码安全审查。</li></ol><p>面试Java运维岗位时，通常需要掌握以下技术栈：</p><ol><li><p><strong>操作系统</strong>：熟悉Linux系统的基本操作和常用命令，包括文件管理、进程管理、用户权限管理等。</p></li><li><p><strong>网络和安全</strong>：了解网络原理和常见网络协议，熟悉TCP&#x2F;IP协议栈，能够进行网络故障排查和调优。同时需要了解网络安全基础知识，包括防火墙、安全策略、SSL&#x2F;TLS等。</p></li><li><p><strong>容器化技术</strong>：熟悉Docker和Kubernetes等容器化技术，能够使用容器部署和管理应用程序，实现快速部署和扩展。</p></li><li><p><strong>自动化运维工具</strong>：熟练使用自动化运维工具，如Ansible、Puppet、Chef等，能够进行系统配置管理、软件部署和任务自动化。</p></li><li><p><strong>监控和日志</strong>：掌握监控系统的搭建和配置，熟悉常用监控工具如Prometheus、Grafana等，能够监控系统性能和应用运行状态。同时需要熟悉日志管理，包括日志收集、存储和分析等。</p></li><li><p><strong>云平台</strong>：了解常见的云计算平台，如AWS、Azure、阿里云等，能够在云平台上部署和管理Java应用程序。</p></li><li><p><strong>数据库管理</strong>：熟悉关系型数据库和NoSQL数据库的安装、配置和优化，能够进行数据库备份、恢复和性能调优。</p></li><li><p><strong>故障排查和性能调优</strong>：具备故障排查和性能调优的能力，能够快速定位和解决系统故障和性能瓶颈。</p></li><li><p><strong>持续集成和持续部署</strong>：了解持续集成和持续部署的流程和工具，能够搭建和管理持续集成和持续部署的环境。</p></li><li><p><strong>安全和备份</strong>：了解系统安全的基本原理和常见攻击手法，能够进行安全漏洞扫描和修复。同时需要具备数据备份和恢复的能力，确保数据的安全性和可靠性。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mybatis</title>
       <link href="/blog/2024/05/27/Mybatis/"/>
       <url>/blog/2024/05/27/Mybatis/</url>
       
