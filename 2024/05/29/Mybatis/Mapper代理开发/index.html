@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png">
 <meta property="article:published_time" content="2024-05-29T12:11:40.000Z">
-<meta property="article:modified_time" content="2024-05-29T13:14:58.900Z">
+<meta property="article:modified_time" content="2024-05-29T13:16:07.158Z">
 <meta property="article:author" content="NIGZLA">
 <meta property="article:tag" content="Mybatis">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-05-29 21:14:58'
+  postUpdate: '2024-05-29 21:16:07'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -153,7 +153,7 @@
         }
       }
       detectApple()
-    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png')"><nav id="nav"><span id="blog-info"><a href="/blog/" title="NIGZLA"><span class="site-name">NIGZLA</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Mapper代理开发</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-29T12:11:40.000Z" title="发表于 2024-05-29 20:11:40">2024-05-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-29T13:14:58.900Z" title="更新于 2024-05-29 21:14:58">2024-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">450</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Mapper代理开发"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Mapper代理开发"><a href="#Mapper代理开发" class="headerlink" title="Mapper代理开发"></a>Mapper代理开发</h1><p>在Mybatis原生代码中，原生代码还是存在一些硬编码，使用Mapper代理开发可简化后期执行SQL。</p>
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/blog/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png')"><nav id="nav"><span id="blog-info"><a href="/blog/" title="NIGZLA"><span class="site-name">NIGZLA</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Mapper代理开发</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-29T12:11:40.000Z" title="发表于 2024-05-29 20:11:40">2024-05-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-29T13:16:07.158Z" title="更新于 2024-05-29 21:16:07">2024-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/blog/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">450</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Mapper代理开发"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Mapper代理开发"><a href="#Mapper代理开发" class="headerlink" title="Mapper代理开发"></a>Mapper代理开发</h1><p>在Mybatis原生代码中，原生代码还是存在一些硬编码，使用Mapper代理开发可简化后期执行SQL。</p>
 <p>​	所以通过使用Mapper代理开发，会更加方便</p>
 <p><img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329105537803.png" alt="image-20240329105537803"></p>
 <h1 id="使用Mapper代理开发流程"><a href="#使用Mapper代理开发流程" class="headerlink" title="使用Mapper代理开发流程"></a>使用Mapper代理开发流程</h1><ol>
@@ -171,31 +171,33 @@
 </li>
 <li><h3 id="在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致"><a href="#在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致" class="headerlink" title="在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致"></a>在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致</h3><ul>
 <li><p>在Mapper接口中需要创建与SQLID同名的方法<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329125042549.png" alt="image-20240329125042549"></p>
-</li>
+<ul>
 <li><h5 id="获取userMapper接口的代理对象"><a href="#获取userMapper接口的代理对象" class="headerlink" title="获取userMapper接口的代理对象"></a>获取userMapper接口的代理对象<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329130823652.png" alt="image-20240329130823652"></h5></li>
-<li><pre><code class="JAVA">  public class MybatisDemo2 &#123;
-      public static void main(String[] args) throws IOException &#123;
-  //        1.加载mybatis核心配置文件，获取SqlSessionFactory Mybatis官方网站有
-          String resource = &quot;mybatis-config.xml&quot;;//mybatis相对路径
-          //获取inputStream通过Resources对象（资源加载类）getResourceAsStream(resource)将字符串传进来 返回一个字节输入流
-          InputStream inputStream = Resources.getResourceAsStream(resource);
-          //通过SqlSessionFactoryBuilder()对象的build()方法将流传进来返回SqlSessionFactory对象
-          SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-  
-  //        2.获取SqlSessionFactory对象 执行sql语句
-          SqlSession session = sqlSessionFactory.openSession();
-  
-  //        3.获取userMapper接口的代理对象
-          //session.getMapper(UserMapper.class);
-          UserMapper userMapper = session.getMapper(UserMapper.class);
-          List&lt;User&gt; userList = userMapper.selectAll();
-          System.out.println(userList);
-  
-  //        4.释放资源
-          session.close();
-  
-      &#125;
-  &#125;
+</ul>
+</li>
+<li><pre><code class="JAVA"> public class MybatisDemo2 &#123;
+     public static void main(String[] args) throws IOException &#123;
+ //        1.加载mybatis核心配置文件，获取SqlSessionFactory Mybatis官方网站有
+         String resource = &quot;mybatis-config.xml&quot;;//mybatis相对路径
+         //获取inputStream通过Resources对象（资源加载类）getResourceAsStream(resource)将字符串传进来 返回一个字节输入流
+         InputStream inputStream = Resources.getResourceAsStream(resource);
+         //通过SqlSessionFactoryBuilder()对象的build()方法将流传进来返回SqlSessionFactory对象
+         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+ 
+ //        2.获取SqlSessionFactory对象 执行sql语句
+         SqlSession session = sqlSessionFactory.openSession();
+ 
+ //        3.获取userMapper接口的代理对象
+         //session.getMapper(UserMapper.class);
+         UserMapper userMapper = session.getMapper(UserMapper.class);
+         List&lt;User&gt; userList = userMapper.selectAll();
+         System.out.println(userList);
+ 
+ //        4.释放资源
+         session.close();
+ 
+     &#125;
+ &#125;
 </code></pre>
 </li>
 <li><h5 id="注意-mybatis-config-xml中的映射路径-所以这种方式在后期Mapper文件多了之后会极其繁琐-UserMapper-OrderMapper-PhoneMapper-随着业务的增加"><a href="#注意-mybatis-config-xml中的映射路径-所以这种方式在后期Mapper文件多了之后会极其繁琐-UserMapper-OrderMapper-PhoneMapper-随着业务的增加" class="headerlink" title="注意 mybatis-config.xml中的映射路径 所以这种方式在后期Mapper文件多了之后会极其繁琐(UserMapper,OrderMapper,PhoneMapper)随着业务的增加"></a>注意 <code>mybatis-config.xml</code>中的映射路径 所以这种方式在后期Mapper文件多了之后会极其繁琐(UserMapper,OrderMapper,PhoneMapper)随着业务的增加<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329125158523.png" alt="image-20240329125158523"></h5></li>
