@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Mapper代理开发</title>
+      <link href="/blog/2024/05/29/Mybatis/Mapper%E4%BB%A3%E7%90%86%E5%BC%80%E5%8F%91/"/>
+      <url>/blog/2024/05/29/Mybatis/Mapper%E4%BB%A3%E7%90%86%E5%BC%80%E5%8F%91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mapper代理开发"><a href="#Mapper代理开发" class="headerlink" title="Mapper代理开发"></a>Mapper代理开发</h1><p>在Mybatis原生代码中，原生代码还是存在一些硬编码，使用Mapper代理开发可简化后期执行SQL。</p><p>​所以通过使用Mapper代理开发，会更加方便</p><p><img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329105537803.png" alt="image-20240329105537803"></p><h1 id="使用Mapper代理开发流程"><a href="#使用Mapper代理开发流程" class="headerlink" title="使用Mapper代理开发流程"></a>使用Mapper代理开发流程</h1><ol><li><h3 id="定义与SQL映射文件同名的Mapper接口，将Mapper接口和SQL映射文件位置放在同一目录下"><a href="#定义与SQL映射文件同名的Mapper接口，将Mapper接口和SQL映射文件位置放在同一目录下" class="headerlink" title="定义与SQL映射文件同名的Mapper接口，将Mapper接口和SQL映射文件位置放在同一目录下"></a>定义与SQL映射文件同名的Mapper接口，将Mapper接口和SQL映射文件位置放在同一目录下</h3><ul><li>在<code>resources</code>下创建与<code>java</code>目录下<code>com.xxx.mapper</code>一致</li><li><code>resources</code>下创建时为<code>com/xxx/mapper</code></li><li><img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329113449014.png" alt="image-20240329113449014"></li></ul></li><li><h3 id="设置SQL映射文件的namespace属性为Mapper接口全限定名"><a href="#设置SQL映射文件的namespace属性为Mapper接口全限定名" class="headerlink" title="设置SQL映射文件的namespace属性为Mapper接口全限定名"></a>设置SQL映射文件的namespace属性为Mapper接口全限定名</h3><p><img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329113827938.png" alt="image-20240329113827938"></p><p><img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329114012968.png" alt="image-20240329114012968"></p><ul><li>这边推荐IDE中MybatisX插件 可用来快速跳转和探究是否已映射上</li></ul></li><li><h3 id="在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致"><a href="#在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致" class="headerlink" title="在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致"></a>在Maooer接口中定义方法，方法名为SQL映射文件中sql语句的ID，并保持参数类型和返回值一致</h3><ul><li><p>在Mapper接口中需要创建与SQLID同名的方法<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329125042549.png" alt="image-20240329125042549"></p></li><li><h5 id="获取userMapper接口的代理对象"><a href="#获取userMapper接口的代理对象" class="headerlink" title="获取userMapper接口的代理对象"></a>获取userMapper接口的代理对象<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329130823652.png" alt="image-20240329130823652"></h5><ul><li><pre><code class="JAVA"></code></pre></li></ul><p> public class MybatisDemo2 {<br>     public static void main(String[] args) throws IOException {<br> &#x2F;&#x2F;        1.加载mybatis核心配置文件，获取SqlSessionFactory Mybatis官方网站有<br>         String resource &#x3D; “mybatis-config.xml”;&#x2F;&#x2F;mybatis相对路径<br>         &#x2F;&#x2F;获取inputStream通过Resources对象（资源加载类）getResourceAsStream(resource)将字符串传进来 返回一个字节输入流<br>         InputStream inputStream &#x3D; Resources.getResourceAsStream(resource);<br>         &#x2F;&#x2F;通过SqlSessionFactoryBuilder()对象的build()方法将流传进来返回SqlSessionFactory对象<br>         SqlSessionFactory sqlSessionFactory &#x3D; new SqlSessionFactoryBuilder().build(inputStream);</p><p> &#x2F;&#x2F;        2.获取SqlSessionFactory对象 执行sql语句<br>         SqlSession session &#x3D; sqlSessionFactory.openSession();</p><p> &#x2F;&#x2F;        3.获取userMapper接口的代理对象<br>         &#x2F;&#x2F;session.getMapper(UserMapper.class);<br>         UserMapper userMapper &#x3D; session.getMapper(UserMapper.class);<br>         List<User> userList &#x3D; userMapper.selectAll();<br>         System.out.println(userList);</p><p> &#x2F;&#x2F;        4.释放资源<br>         session.close();</p><pre><code> &#125;</code></pre><p> }</p><pre><code></code></pre></li><li><h5 id="注意-mybatis-config-xml中的映射路径-所以这种方式在后期Mapper文件多了之后会极其繁琐-UserMapper-OrderMapper-PhoneMapper-随着业务的增加"><a href="#注意-mybatis-config-xml中的映射路径-所以这种方式在后期Mapper文件多了之后会极其繁琐-UserMapper-OrderMapper-PhoneMapper-随着业务的增加" class="headerlink" title="注意 mybatis-config.xml中的映射路径 所以这种方式在后期Mapper文件多了之后会极其繁琐(UserMapper,OrderMapper,PhoneMapper)随着业务的增加"></a>注意 <code>mybatis-config.xml</code>中的映射路径 所以这种方式在后期Mapper文件多了之后会极其繁琐(UserMapper,OrderMapper,PhoneMapper)随着业务的增加<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329125158523.png" alt="image-20240329125158523"></h5></li><li><h5 id="所以后期多采用包扫描方式来进行扫描映射-所有Mapper映射都在-mapper文件夹下"><a href="#所以后期多采用包扫描方式来进行扫描映射-所有Mapper映射都在-mapper文件夹下" class="headerlink" title="所以后期多采用包扫描方式来进行扫描映射 所有Mapper映射都在&#x2F;mapper文件夹下"></a>所以后期多采用包扫描方式来进行扫描映射 所有Mapper映射都在&#x2F;mapper文件夹下<img src="https://nigzla.github.io//blog/2024/05/27/Mybatis/image-20240329130615459.png" alt="image-20240329130615459"></h5></li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mybatis快速入门</title>
       <link href="/blog/2024/05/28/Mybatis/Mybatis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
       <url>/blog/2024/05/28/Mybatis/Mybatis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</url>
@@ -163,14 +188,14 @@
       
       <categories>
           
-          <category> 教程 </category>
+          <category> 编程 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 教程 </tag>
+            <tag> Mybatis </tag>
             
         </tags>
       
@@ -219,8 +244,6 @@
       
       
         <tags>
-            
-            <tag> 教程 </tag>
             
             <tag> 编程 </tag>
             

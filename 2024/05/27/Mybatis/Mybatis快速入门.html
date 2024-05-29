@@ -1,0 +1,26 @@
+<hr>
+<h2 id="title-Mybatis快速入门date-2024-05-28-17-15-40tags-Mybatiscategories-编程keywords-“Mybatis快速入门”updated-type-comments-description-top-img-mathjax-katex-aside-aplayer-highlight-shrink-random-cover-https-www-mulei-ltd-wp-content-uploads-2021-07-cover-mybatis-png"><a href="#title-Mybatis快速入门date-2024-05-28-17-15-40tags-Mybatiscategories-编程keywords-“Mybatis快速入门”updated-type-comments-description-top-img-mathjax-katex-aside-aplayer-highlight-shrink-random-cover-https-www-mulei-ltd-wp-content-uploads-2021-07-cover-mybatis-png" class="headerlink" title="title: Mybatis快速入门date: 2024-05-28 17:15:40tags:  - Mybatiscategories:  - 编程keywords: “Mybatis快速入门”updated:type:comments:description:top_img:mathjax:katex:aside:aplayer:highlight_shrink:random:cover: https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png"></a>title: Mybatis快速入门<br>date: 2024-05-28 17:15:40<br>tags:<br>  - Mybatis<br>categories:<br>  - 编程<br>keywords: “Mybatis快速入门”<br>updated:<br>type:<br>comments:<br>description:<br>top_img:<br>mathjax:<br>katex:<br>aside:<br>aplayer:<br>highlight_shrink:<br>random:<br>cover: <a href="https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png">https://www.mulei.ltd/wp-content/uploads/2021/07/cover-mybatis.png</a></h2><h1 id="Mybatis快速入门"><a href="#Mybatis快速入门" class="headerlink" title="Mybatis快速入门"></a>Mybatis快速入门</h1><pre><code class="Java">public class MybatisDemo {
+    public static void main(String[] args) throws IOException {
+        
+//        1.加载mybatis核心配置文件，获取SqlSessionFactory Mybatis官方网站有
+        String resource = &quot;mybatis-config.xml&quot;;//mybatis相对路径
+        //获取inputStream通过Resources对象（资源加载类）getResourceAsStream(resource)将字符串传进来 返回一个字节输入流
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        //通过SqlSessionFactoryBuilder()对象的build()方法将流传进来返回SqlSessionFactory对象
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+//        2.获取SqlSessionFactory对象 执行sql语句
+        SqlSession session = sqlSessionFactory.openSession();
+
+//        3.执行sql语句
+          //session.selectOne()
+          //session.selectList(&quot;test.selectAll&quot;);
+        List&lt;User&gt; users = session.selectList(&quot;MapperDemo.selectAll&quot;);
+        System.out.println(users);
+
+//        4.释放资源
+        session.close();
+
+    }
+}
+</code></pre>
